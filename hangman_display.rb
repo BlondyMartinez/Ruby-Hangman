@@ -1,7 +1,8 @@
-class Display
+class HangmanDisplay
 
     def stage(failed_attempts)
-        puts @@hangman_stages[stage]
+        puts @@hangman_stages[failed_attempts]
+        puts
     end
 
     @@hangman_stages = [
@@ -42,22 +43,31 @@ class Display
       |
 =========",
 # failed attempts 4
-  "
+  '
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========',
+# failed attempts 5
+  '
   +---+
   |   |
   O   |
  /|\  |
  /    |
       |
-=========",
-# failed attempts 5
-  "
+=========',
+# failed attempts 6
+  '
   +---+
   |   |
   O   |
  /|\  |
  / \  |
       |
-========="
+========='
 ]
 end
