@@ -76,8 +76,6 @@ class Game
                 puts "Invalid guess. Please type a letter."
             end
 
-            save if input.downcase === "save"
-
             input = gets.chomp
             already_used = @wrong_letters.include?(input) || @correct_letters.include?(input)
         end
