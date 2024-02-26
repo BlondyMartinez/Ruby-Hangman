@@ -30,7 +30,8 @@ class Game
     def welcome
         puts "Welcome to Hangman!"
         puts "Try to guess the word by suggesting letters."
-        puts "You have 6 attempts to guess the word correctly.\n"
+        puts "You have 6 attempts to guess the word correctly."
+        puts "To save game type 'save' any time during the game.\n"
     end
 
     def initialize_classes
