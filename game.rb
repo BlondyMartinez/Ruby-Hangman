@@ -109,8 +109,9 @@ class Game
     end
 
     def saves_found
-        save_files = Dir.entries('saves').map { |filename| File.basename(filename, ".yml") }.join(", ")
-        puts "These save files: #{save_files} have been found."
+        save_files = Dir.entries('saves').reject! { |filename| filename == '.' || filename == '..' }
+        .map { |filename| File.basename(filename, ".yml") }.join(", ")
+        puts "These save files: #{save_files}; have been found."
         puts "Do you want to load a save file or to start a new game? Type either load or new."
         choice = get_player_choice
         
